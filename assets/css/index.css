@@ -1,0 +1,9 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.hidden {
+    position: absolute;
+    width: 0px;
+    opacity: 0;
+}
