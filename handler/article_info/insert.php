@@ -2,6 +2,7 @@
 require_once '../../config/config.php';
 
 function article_content_insert () {
+    $db = new DB;
     $info = explode('.', $_POST['info']);
     $info_length = count($info);
     $id = $_POST['id'];

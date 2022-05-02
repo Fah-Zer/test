@@ -1,5 +1,8 @@
 <?php
 
-$dsn = 'mysql:host=localhost;dbname=';
-$user = '';
-$pass = '';
+return [
+    'host' => 'localhost',
+    'dbname' => '',
+    'login' => '',
+    'password' => ''
+];
