@@ -2,6 +2,20 @@
     display: flex;
     flex-direction: column;
 }
+.input {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    outline: 0;
+}
+.title {
+    border-color: azure;
+}
+.item {
+    border-color: burlywood;
+}
 .hidden {
     position: absolute;
     width: 0px;
