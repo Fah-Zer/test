@@ -28,3 +28,5 @@ class DB
 			return $stmt->fetchAll(PDO::FETCH_ASSOC);
 		}
 }
+
+$db = new DB;
