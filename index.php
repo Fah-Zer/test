@@ -36,7 +36,7 @@ require_once __DIR__ . '/config/config.php';
     <input class="input item" type="text" name="4_item_4_2" placeholder="unordered list item">
     <input class="input item" type="text" name="4_item_4_3" placeholder="unordered list item">
     <input class="input item" type="text" name="4_item_4_4" placeholder="unordered list item">
-    <input class="hidden" type="text" name="info" value="1_3.3_5.2_2.4_4.4_5">
+    <input class="hidden" type="text" name="info" value="1.3_3.5_2.2_4.4_4.5">
     <input class="hidden" type="text" name="id" value="1">
 
     <input type="submit" value="Run">
