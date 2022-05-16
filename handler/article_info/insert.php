@@ -3,8 +3,8 @@ require_once '../../config/config.php';
 
 function sendData($db) {
     $id = 2;
-    $sqlInfo1 = 'INSERT INTO article_content(article_id, type, value, sequence) VALUES ';
-    $sqlInfo2 = 'INSERT INTO content(id, sequence, value) VALUES ';
+    $sqlInfo1 = 'INSERT INTO group_t(article_id, type, value, sequence) VALUES ';
+    $sqlInfo2 = 'INSERT INTO content(group_id, sequence, value) VALUES ';
     $sqlData1 = '';
     $sqlData2 = '';
     $sql = '';
@@ -16,7 +16,7 @@ function sendData($db) {
         $sqlData1 = $sqlData1 . '(' . $id . ',' . $groupElementType . ',\'' . $groupElementTitle . '\',' . $i . '),';
         for($j = 0; $j < count($groupElementContent); $j++) {
             $contentElement = $groupElementContent[$j];
-            $newId = '(SELECT id FROM article_content WHERE article_id = ' . $id . ' AND type = ' . $groupElementType . ' AND sequence = ' . $i . ')';
+            $newId = '(SELECT id FROM group_t WHERE article_id = ' . $id . ' AND type = ' . $groupElementType . ' AND sequence = ' . $i . ')';
             $sqlData2 = $sqlData2 . '(' . $newId . ',' . $j . ', \'' . $contentElement . '\'),';
         }
     }

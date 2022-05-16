@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/config/config.php';
-require_once __DIR__ . '/handler/article_info/view.php';
-$id = 2;
+require_once __DIR__ . '/layouts/article_info/insert.php';
+$id = 1;
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +13,6 @@ $id = 2;
     <title>php_test</title>
 </head>
 <body>
-    <?php actionView($db, $id); ?>
+    <?php actionView(); ?>
 </body>
 </html>

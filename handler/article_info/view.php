@@ -26,10 +26,10 @@ function generateGroup($group, $content) {
 }
 
 function actionView($db, $id) {
-    $sql = 'SELECT id, type, value, sequence FROM article_content where article_id = ' . $id . ';';
+    $sql = 'SELECT group_id, type, value, sequence FROM group_t where article_id = ' . $id . ';';
     $group = $db->query($sql);
     $sql = 'SELECT * FROM content WHERE id IN
-    (SELECT id FROM article_content where article_id = ' . $id . ')';
+    (SELECT id FROM group_t where article_id = ' . $id . ')';
     $content = $db->query($sql);
     generateGroup($group, $content);
 }
