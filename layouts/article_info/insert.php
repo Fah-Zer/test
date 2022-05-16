@@ -1,33 +1,36 @@
 <?php
 
-function view() { ?>
+function actionView() { ?>
     <form class="form" action="handler/article_info/insert.php" method="post">
-        <input class="input title" type="text" name="1_title_0" placeholder="chapter title">
-        <input class="input item" type="text" name="1_item_0_0" placeholder="chapter item">
-        <input class="input item" type="text" name="1_item_0_1" placeholder="chapter item">
-        <input class="input item" type="text" name="1_item_0_2" placeholder="chapter item">
-        <input class="input title" type="text" name="3_title_1" placeholder="ordered list title">
-        <input class="input item" type="text" name="3_item_1_0" placeholder="ordered list item">
-        <input class="input item" type="text" name="3_item_1_1" placeholder="ordered list item">
-        <input class="input item" type="text" name="3_item_1_2" placeholder="ordered list item">
-        <input class="input item" type="text" name="3_item_1_3" placeholder="ordered list item">
-        <input class="input item" type="text" name="3_item_1_4" placeholder="ordered list item">
-        <input class="input title" type="text" name="2_title_2" placeholder="image title">
-        <input class="input item" type="text" name="2_item_2_0" placeholder="image item">
-        <input class="input item" type="text" name="2_item_2_1" placeholder="image item">
-        <input class="input title" type="text" name="4_title_3" placeholder="unordered list title">
-        <input class="input item" type="text" name="4_item_3_0" placeholder="unordered list item">
-        <input class="input item" type="text" name="4_item_3_1" placeholder="unordered list item">
-        <input class="input item" type="text" name="4_item_3_2" placeholder="unordered list item">
-        <input class="input item" type="text" name="4_item_3_3" placeholder="unordered list item">
-        <input class="input title" type="text" name="4_title_4" placeholder="unordered list title">
-        <input class="input item" type="text" name="4_item_4_0" placeholder="unordered list item">
-        <input class="input item" type="text" name="4_item_4_1" placeholder="unordered list item">
-        <input class="input item" type="text" name="4_item_4_2" placeholder="unordered list item">
-        <input class="input item" type="text" name="4_item_4_3" placeholder="unordered list item">
-        <input class="input item" type="text" name="4_item_4_4" placeholder="unordered list item">
-        <input class="hidden" type="text" name="info" value="1.3_3.5_2.2_4.4_4.5">
-        <input class="hidden" type="text" name="id" value="1">
+        <input class="input title" type="text" name="group_0[info][title]" placeholder="chapter title">
+        <input class="hidden" type="text" name="group_0[info][type]" value="1">
+        <input class="input item" type="text" name="group_0[content][]" placeholder="paragraph">
+        <input class="input item" type="text" name="group_0[content][]" placeholder="paragraph">
+        <input class="input item" type="text" name="group_0[content][]" placeholder="paragraph">
+        <input class="input title" type="text" name="group_1[info][title]" placeholder="ordered list title">
+        <input class="hidden" type="text" name="group_1[info][type]" value="3">
+        <input class="input item" type="text" name="group_1[content][]" placeholder="list item">
+        <input class="input item" type="text" name="group_1[content][]" placeholder="list item">
+        <input class="input item" type="text" name="group_1[content][]" placeholder="list item">
+        <input class="input item" type="text" name="group_1[content][]" placeholder="list item">
+        <input class="input item" type="text" name="group_1[content][]" placeholder="list item">
+        <input class="input title" type="text" name="group_2[info][title]" placeholder="image group title">
+        <input class="hidden" type="text" name="group_2[info][type]" value="2">
+        <input class="input item" type="text" name="group_2[content][]" placeholder="image">
+        <input class="input item" type="text" name="group_2[content][]" placeholder="image">
+        <input class="input title" type="text" name="group_3[info][title]" placeholder="unordered list title">
+        <input class="hidden" type="text" name="group_3[info][type]" value="4">
+        <input class="input item" type="text" name="group_3[content][]" placeholder="list item">
+        <input class="input item" type="text" name="group_3[content][]" placeholder="list item">
+        <input class="input item" type="text" name="group_3[content][]" placeholder="list item">
+        <input class="input item" type="text" name="group_3[content][]" placeholder="list item">
+        <input class="input title" type="text" name="group_4[info][title]" placeholder="unordered list title">
+        <input class="hidden" type="text" name="group_4[info][type]" value="4">
+        <input class="input item" type="text" name="group_4[content][]" placeholder="list item">
+        <input class="input item" type="text" name="group_4[content][]" placeholder="list item">
+        <input class="input item" type="text" name="group_4[content][]" placeholder="list item">
+        <input class="input item" type="text" name="group_4[content][]" placeholder="list item">
+        <input class="input item" type="text" name="group_4[content][]" placeholder="list item">
 
         <input type="submit" value="Run">
     </form>

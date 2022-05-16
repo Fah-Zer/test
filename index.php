@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/config/config.php';
 require_once __DIR__ . '/handler/article_info/view.php';
+$id = 2;
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +13,6 @@ require_once __DIR__ . '/handler/article_info/view.php';
     <title>php_test</title>
 </head>
 <body>
-    <?php actionView($db); ?>
+    <?php actionView($db, $id); ?>
 </body>
 </html>

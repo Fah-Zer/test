@@ -1,12 +1,7 @@
 <?php
 
-/*
-USE test_db; SELECT * FROM article_content where article_id = 1; SELECT * FROM content WHERE id IN
-(SELECT id FROM article_content where article_id = 1);
-*/
-
 function generateElement($groupElementId, $content) {
-    echo '<div style="padding-left: 10px"><h3>Elements</h3>';
+    echo '<div style="padding-left: 10px">';
     for($j = 0; $j < count($content); $j++) {
         $contentElement = $content[$j];
         $contentElementId = $contentElement['id'];
@@ -24,17 +19,17 @@ function generateGroup($group, $content) {
         $groupElement = $group[$i];
         $groupElementId = $groupElement['id'];
         $groupElementValue = $groupElement['value'];
-        echo '<p>' . $groupElementValue . '</p>';
+        echo '<h3>' . $groupElementValue . '</h3>';
         generateElement($groupElementId, $content);
     }
     echo '</div>';
 }
 
-function actionView($db) {
-    $sql = 'SELECT id, type, value, sequence FROM article_content where article_id = 1;';
+function actionView($db, $id) {
+    $sql = 'SELECT id, type, value, sequence FROM article_content where article_id = ' . $id . ';';
     $group = $db->query($sql);
     $sql = 'SELECT * FROM content WHERE id IN
-    (SELECT id FROM article_content where article_id = 1)';
+    (SELECT id FROM article_content where article_id = ' . $id . ')';
     $content = $db->query($sql);
     generateGroup($group, $content);
 }
