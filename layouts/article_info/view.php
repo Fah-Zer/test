@@ -4,7 +4,7 @@ function generateElement($groupElementId, $content) {
     echo '<div style="padding-left: 10px">';
     for($j = 0; $j < count($content); $j++) {
         $contentElement = $content[$j];
-        $contentElementId = $contentElement['id'];
+        $contentElementId = $contentElement['group_id'];
         if ($groupElementId === $contentElementId) {
             $contentElementValue = $contentElement['value'];
             echo '<p>' . $contentElementValue . '</p>';
@@ -26,10 +26,10 @@ function generateGroup($group, $content) {
 }
 
 function actionView($db, $id) {
-    $sql = 'SELECT group_id, type, value, sequence FROM group_t where article_id = ' . $id . ';';
+    $sql = 'SELECT id, type, value, sequence FROM group_t where article_id = ' . $id . ';';
     $group = $db->query($sql);
-    $sql = 'SELECT * FROM content WHERE id IN
-    (SELECT id FROM group_t where article_id = ' . $id . ')';
+    $sql = 'SELECT * FROM content WHERE group_id IN
+    (SELECT group_id FROM group_t where article_id = ' . $id . ')';
     $content = $db->query($sql);
     generateGroup($group, $content);
 }

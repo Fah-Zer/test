@@ -2,6 +2,7 @@
 
 function actionView() { ?>
     <form class="form" action="handler/article_info/insert.php" method="post">
+        <input class="input title" type="text" name="id" placeholder="article id">
         <input class="input title" type="text" name="group_0[info][title]" placeholder="chapter title">
         <input class="hidden" type="text" name="group_0[info][type]" value="1">
         <input class="input item" type="text" name="group_0[content][]" placeholder="paragraph">

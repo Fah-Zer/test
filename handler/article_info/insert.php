@@ -2,7 +2,8 @@
 require_once '../../config/config.php';
 
 function sendData($db) {
-    $id = 2;
+    $id = $_POST['id'];
+    unset($_POST['id']);
     $sqlInfo1 = 'INSERT INTO group_t(article_id, type, value, sequence) VALUES ';
     $sqlInfo2 = 'INSERT INTO content(group_id, sequence, value) VALUES ';
     $sqlData1 = '';
